@@ -325,7 +325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -490, y: -248.5}
+  m_AnchoredPosition: {x: 0, y: -190}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501886565
@@ -372,8 +372,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1608114954}
-        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+      - m_Target: {fileID: 762445511}
+        m_TargetAssemblyTypeName: GameSequencer, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -580,6 +580,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 605cc474df6034047b5c4926d20749ff, type: 3}
+--- !u!114 &762445511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4851859882020807646, guid: 605cc474df6034047b5c4926d20749ff, type: 3}
+  m_PrefabInstance: {fileID: 762445510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4d869e72ff35846abb61dc045eed78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,17 +674,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608114954 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2030425660415572389, guid: d0e293ff4fe809649a0027aae4e2bcb3, type: 3}
-  m_PrefabInstance: {fileID: 3623517400703570692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c594f26d092d5d4cb0f21999e5c7645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1801376217
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Reset
 --- !u!222 &1801376220
 CanvasRenderer:
   m_ObjectHideFlags: 0

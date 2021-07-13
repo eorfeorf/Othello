@@ -29,9 +29,12 @@ public class GameSequencer : MonoBehaviour
         board = FindObjectOfType<Board>();
         
         playerFirst = Instantiate(playerPrefab, transform);
-        playerFirst.Init(GameInfo.PlayerId.First, firstPlayerInputConfig);
         playerSecond = Instantiate(playerPrefab, transform);
+        playerFirst.Init(GameInfo.PlayerId.First, firstPlayerInputConfig);
         playerSecond.Init(GameInfo.PlayerId.Second, secondPlayerInputConfig);
+        
+        playerFirst.SetCursorPos(new Vector2Int(GameInfo.Half, GameInfo.Half));
+        playerSecond.SetCursorPos(new Vector2Int(GameInfo.Half-1, GameInfo.Half));
 
         currentPlayer = playerFirst;
         
@@ -92,6 +95,14 @@ public class GameSequencer : MonoBehaviour
             
             AutoPut(currentPlayer);
         }
+    }
+
+    public void Reset()
+    {
+        board.Reset();
+        currentPlayer = playerFirst;
+        playerFirst.SetCursorPos(new Vector2Int(GameInfo.Half, GameInfo.Half));
+        playerSecond.SetCursorPos(new Vector2Int(GameInfo.Half-1, GameInfo.Half));
     }
 
     private void AutoPut(IPlayer player)

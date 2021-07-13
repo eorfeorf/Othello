@@ -67,4 +67,10 @@ public class Player : MonoBehaviour, IPlayer
             gameManager.GetSequencer().SwitchPlayer.SetValueAndForceNotify(id.Value);
         }
     }
+
+    public void SetCursorPos(Vector2Int pos)
+    {
+        cursorPosX.Value = pos.x;
+        cursorPosY.Value = pos.y;
+    }
 }
